@@ -19,6 +19,7 @@ public class SecurityConfiguration {
 	PasswordEncoder getPasswordEncoder() {
 		return new BCryptPasswordEncoder(strength);
 	}
+	
 	@Bean
 	SecurityFilterChain configure(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.cors(customizer -> customizer.disable());
